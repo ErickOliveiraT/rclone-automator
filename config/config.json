@@ -1,0 +1,49 @@
+{
+    "runs": [
+        {
+            "cron": "0 0,6,2,18 * * *",
+            "folderpairs": [
+                {
+                    "name": "Test folderpair",
+                    "from": "/home/erick/test folder",
+                    "to": "1st:/test_folder",
+                    "operation": "sync",
+                    "excludes":["**/node_modules/**"],
+                    "filters": []
+                },
+                {
+                    "name": "Documents",
+                    "from": "/home/erick/Documentos",
+                    "to": "1st:Backup Externo/Vivobook/Documentos",
+                    "operation": "sync",
+                    "excludes":["/Dump BD/**"],
+                    "filters": []
+                },
+                {
+                    "name": "Projects",
+                    "from": "/home/erick/Projetos",
+                    "to": "1st:Backup Externo/Vivobook/Projetos",
+                    "operation": "sync",
+                    "excludes":["**/node_modules/**","/embrasando/**","**/.git/**"],
+                    "filters": []
+                },
+                {
+                    "name": "Embrasando",
+                    "from": "/home/erick/Projetos/embrasando",
+                    "to": "1st:Backup Externo/Vivobook/Projetos/embrasando",
+                    "operation": "sync",
+                    "excludes":[],
+                    "filters": ["+ /app/**","+ /bin/**","+ /lib/**","+ /config/**","+ /db/**","- /**"]
+                },
+                {
+                    "name": "Images",
+                    "from": "/home/erick/Imagens",
+                    "to": "1st:Backup Externo/Vivobook/Imagens",
+                    "operation": "sync",
+                    "excludes": [],
+                    "filters": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "runs": [
+        {
+            "cron": "0 0,6,2,18 * * *",
+            "folderpairs": [
+                {
+                    "name": "Projects",
+                    "from": "/home/erick/Projects",
+                    "to": "1st:Backup Externo/Vivobook/Projects",
+                    "operation": "sync",
+                    "excludes":[],
+                    "filters": ["+ /app/**","+ /bin/**","+ /lib/**","+ /config/**","+ /db/**","- /**"]
+                }
+            ]
+        }
+    ]
+}
